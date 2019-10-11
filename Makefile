@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 ROOT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
-PROJECT_NAME = flask-unleash
+PROJECT_NAME = flask_unleash
 
 #-----------------------------------------------------------------------
 # Rules of Rules : Grouped rules that _doathing_
@@ -30,7 +30,7 @@ lint:
 
 pytest:
 	export PYTHONPATH=${ROOT_DIR}: $$PYTHONPATH && \
-	py.test --cov ${PROJECT_NAME} tests/unit_tests
+	py.test --cov ${PROJECT_NAME} tests
 
 tox-osx:
 	tox -c tox-osx.ini --parallel auto
