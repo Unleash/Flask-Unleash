@@ -6,7 +6,7 @@ def readme():
         return file.read()
 
 setup(
-    name='flask-unleash',
+    name='flask_unleash',
     version='0.1.0',
     url='https://github.com/unleash/unleash-client-python',
     license='MIT',
