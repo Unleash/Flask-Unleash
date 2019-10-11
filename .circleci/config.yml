@@ -25,8 +25,8 @@ jobs:
                 name: Lint code.
                 command: |
                     . venv/bin/activate
-                    mypy UnleashClient
-                    pylint UnleashClient
+                    mypy flask_unleash
+                    pylint flask_unleash
             - run:
                 name: Run unit tests.
                 command: |
