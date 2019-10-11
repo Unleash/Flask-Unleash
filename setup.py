@@ -20,7 +20,7 @@ setup(
     include_package_data=True,
     platforms='any',
     install_requires=[
-        'UnleashClinet==3.1.0'
+        'UnleashClient==3.1.1'
     ],
     classifiers=[
         "Development Status :: 1 - Planning",

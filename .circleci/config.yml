@@ -31,12 +31,7 @@ jobs:
                 name: Run unit tests.
                 command: |
                     . venv/bin/activate
-                    py.test --html=pytest/results.html --junitxml=pytest/results.xml --self-contained-html --cov=UnleashClient tests/unit_tests
-            - run:
-                name: Run specification tests.
-                command: |
-                    . venv/bin/activate
-                    py.test tests/specification_tests
+                    py.test --html=pytest/results.html --junitxml=pytest/results.xml --self-contained-html --cov=flask_unleash testsgit
             - store_test_results:
                 path: pytest
             - run:
