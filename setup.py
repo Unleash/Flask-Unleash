@@ -20,7 +20,7 @@ setup(
     include_package_data=True,
     platforms='any',
     install_requires=[
-        'UnleashClient==3.1.1',
+        'UnleashClient',
         'Flask'
     ],
     classifiers=[
