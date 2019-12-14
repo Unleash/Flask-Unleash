@@ -1,0 +1,17 @@
+GET http://localhost:5000/check?userId=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-12-14T080533.200.json
+
+###
+
+GET http://localhost:5000/check?userId=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-12-14T080533.200.json
+
+###
+
+

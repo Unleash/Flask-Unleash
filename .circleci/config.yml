@@ -39,17 +39,6 @@ jobs:
                 command: |
                     . venv/bin/activate
                     coveralls
-    tox-3.5:
-        docker:
-             - image: circleci/python:3.5
-        steps:
-            - checkout
-            - *install_tox
-            - run:
-                name: "Run tox for Python 3.5"
-                command: |
-                    . venv/bin/activate
-                    tox -e py35
 
     tox-3.6:
         docker:
@@ -80,9 +69,6 @@ workflows:
     build_and_test:
         jobs:
             - test
-            - tox-3.5:
-                requires:
-                    - test
             - tox-3.6:
                 requires:
                     - test

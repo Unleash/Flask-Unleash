@@ -1,5 +1,9 @@
 # App packages
-UnleashClient==3.1.0
+UnleashClient
+Flask
+
+# Demo app
+logmatic
 
 # Development packages
 bumpversion
