@@ -2,6 +2,9 @@
 UnleashClient
 Flask
 
+# Demo app
+logmatic
+
 # Development packages
 bumpversion
 coveralls
