@@ -26,7 +26,7 @@ class Unleash():
             disable_registration=app.config['UNLEASH_DISABLE_REGISTRATION'] if 'UNLEASH_DISABLE_REGISTRATION' in app.config else False,
             custom_headers=app.config['UNLEASH_CUSTOM_HEADERS'] if 'UNLEASH_CUSTOM_HEADERS' in app.config else {},
             custom_options=app.config['UNLEASH_CUSTOM_OPTIONS'] if 'UNLEASH_CUSTOM_OPTIONS' in app.config else {},
-            custom_strategies=app.config['UNLEASH_CUSTOM+STRATEGIES'] if 'STRATEGIES' in app.config else {},
+            custom_strategies=app.config['UNLEASH_CUSTOM_STRATEGIES'] if 'STRATEGIES' in app.config else {},
             cache_directory=app.config['UNLEASH_CACHE_DIRECTORY'] if 'UNLEASH_CACHE_DIRECTORY' in app.config else None
         )
 

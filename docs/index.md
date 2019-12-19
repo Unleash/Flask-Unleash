@@ -1,6 +1,6 @@
 # Flask-Unleash
 
-Flask extension to make using Unleash that much easier! 🚦🚦🚦  This plugin makes integrating the [Python Unleash client](https://github.com/unleash/unleash-client-python) into quick and easy.
+Welcome to the Flask-Unleash pluginm documentation!  This plugin makes integrating the [Python Unleash client](https://github.com/unleash/unleash-client-python) into quick and easy.
 
 ## Pre-requisites
 

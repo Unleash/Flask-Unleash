@@ -21,6 +21,5 @@ pytest-rerunfailures
 pytest-runner
 pytest-xdist
 responses
-sphinx
 tox
 twine
