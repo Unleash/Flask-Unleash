@@ -8,11 +8,11 @@ def readme():
 setup(
     name='flask_unleash',
     version='1.0.1',
-    url='https://github.com/unleash/unleash-client-python',
+    url='https://github.com/Unleash/Flask-Unleash',
     license='MIT',
     author='Ivan Lee',
     author_email='ivanklee86@gmail.com',
-    description='Flask extention ',
+    description='Flask extension for unleash-client-python.',
     long_description=readme(),
     long_description_content_type="text/markdown",
     packages=find_packages(),
