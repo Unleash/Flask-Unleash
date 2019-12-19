@@ -5,6 +5,7 @@ Welcome to the Flask-Unleash pluginm documentation!  This plugin makes integrati
 ## Pre-requisites
 
 To try out Flask-Unleash, you'll need an instance of the [Unleash](http://github.com/unleash/unleash) server.  You can either use:
+
 * Spin up a stack in Docker Compose using [unleash-docker](https://github.com/Unleash/unleash-docker)
 * Check out the demo at [Unleash-Hosted](https://www.unleash-hosted.com/)
 
