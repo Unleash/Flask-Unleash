@@ -7,7 +7,7 @@ def readme():
 
 setup(
     name='flask_unleash',
-    version='0.1.0',
+    version='1.0.0',
     url='https://github.com/unleash/unleash-client-python',
     license='MIT',
     author='Ivan Lee',
@@ -24,9 +24,11 @@ setup(
         'Flask'
     ],
     classifiers=[
-        "Development Status :: 1 - Planning",
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3.7"
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8"
     ]
 )
