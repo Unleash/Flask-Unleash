@@ -47,3 +47,15 @@ build-package:
 
 upload:
 	twine upload dist/*
+
+
+#-----------------------------------------------------------------------
+# Run demo app
+#-----------------------------------------------------------------------
+run:
+	export PYTHONPATH=${ROOT_DIR}; \
+	python demo_app/app.py
+
+run-gunicorn:
+    export PYTHONPATH=${ROOT_DIR}; \
+	gunicorn --config gunicorn_config.py wsgi

@@ -3,6 +3,19 @@ from UnleashClient import UnleashClient
 from flask import current_app, _app_ctx_stack  # type: ignore
 
 
+CONFIG_MAPPING = {
+    'UNLEASH_INSTANCE_ID': 'instance_id',
+    'UNLEASH_REFRESH_INTERVAL': 'refresh_interval',
+    'UNLEASH_METRIC_INTERVAL': 'metrics_interval',
+    'UNLEASH_DISABLE_METRICS': 'disable_metrics',
+    'UNLEASH_DISABLE_REGISTRATION': 'disable_registration',
+    'UNLEASH_CUSTOM_HEADERS': 'custom_headers',
+    'UNLEASH_CUSTOM_OPTIONS': 'custom_options',
+    'UNLEASH_CUSTOM_STRATEGIES': 'custom_strategies',
+    'UNLEASH_CACHE_DIRECTORY': 'cache_directory'
+}
+
+
 class Unleash():
     def __init__(self, app=None):
         # Constants
@@ -15,20 +28,20 @@ class Unleash():
             self.init_app(app)
 
     def init_app(self, app):
-        self.client = UnleashClient(
-            url=app.config['UNLEASH_URL'],
-            app_name=app.config['UNLEASH_APP_NAME'],
-            environment=app.config['UNLEASH_ENVIRONMENT'],
-            instance_id=app.config['UNLEASH_INSTANCE_ID'] if "UNLEASH_INSTANCE_ID" in app.config else "unleash-client-python",
-            refresh_interval=app.config['UNLEASH_REFRESH_INTERVAL'] if 'UNLEASH_REFRESH_INTERVAL' in app.config else 15,
-            metrics_interval=app.config['UNLEASH_METRIC_INTERVAL'] if 'UNLEASH_METRIC_INTERVAL' in app.config else 60,
-            disable_metrics=app.config['UNLEASH_DISABLE_METRICS'] if 'UNLEASH_DISABLE_METRICS' in app.config else False,
-            disable_registration=app.config['UNLEASH_DISABLE_REGISTRATION'] if 'UNLEASH_DISABLE_REGISTRATION' in app.config else False,
-            custom_headers=app.config['UNLEASH_CUSTOM_HEADERS'] if 'UNLEASH_CUSTOM_HEADERS' in app.config else {},
-            custom_options=app.config['UNLEASH_CUSTOM_OPTIONS'] if 'UNLEASH_CUSTOM_OPTIONS' in app.config else {},
-            custom_strategies=app.config['UNLEASH_CUSTOM_STRATEGIES'] if 'STRATEGIES' in app.config else {},
-            cache_directory=app.config['UNLEASH_CACHE_DIRECTORY'] if 'UNLEASH_CACHE_DIRECTORY' in app.config else None
-        )
+        # Populate required arguments.
+        unleash_args = {
+            'url': app.config['UNLEASH_URL'],
+            'app_name': app.config['UNLEASH_APP_NAME'],
+            'environment': app.config['UNLEASH_ENVIRONMENT']
+        }
+
+        # Populate optional arguments.
+        populated_optional_args = filter(lambda x: x in app.config, CONFIG_MAPPING.keys())
+        for option in populated_optional_args:
+            unleash_args[CONFIG_MAPPING[option]] = app.config[option]
+
+        # Set up client.
+        self.client = UnleashClient(**unleash_args)
 
         self.client.initialize_client()
         app.extensions = getattr(app, 'extensions', {})
