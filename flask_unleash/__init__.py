@@ -28,17 +28,19 @@ class Unleash():
             self.init_app(app)
 
     def init_app(self, app):
+        # Populate required arguments.
         unleash_args = {
             'url': app.config['UNLEASH_URL'],
             'app_name': app.config['UNLEASH_APP_NAME'],
             'environment': app.config['UNLEASH_ENVIRONMENT']
         }
 
+        # Populate optional arguments.
         populated_optional_args = filter(lambda x: x in app.config, CONFIG_MAPPING.keys())
-
         for option in populated_optional_args:
             unleash_args[CONFIG_MAPPING[option]] = app.config[option]
 
+        # Set up client.
         self.client = UnleashClient(**unleash_args)
 
         self.client.initialize_client()
