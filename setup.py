@@ -23,6 +23,7 @@ setup(
         'UnleashClient==3.4.0',
         'Flask'
     ],
+    python_requres=">=3.6",
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
