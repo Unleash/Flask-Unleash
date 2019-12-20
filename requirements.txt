@@ -23,3 +23,7 @@ pytest-xdist
 responses
 tox
 twine
+
+# Gunicorn
+gunicorn
+gevent
