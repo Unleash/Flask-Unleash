@@ -1,0 +1,66 @@
+name: CI
+
+on: [push]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Linting
+        run: |
+          mypy flask_unleash
+          pylint flask_unleash
+      - name: Unit tests
+        run: |
+          py.test --html=pytest/results.html --junitxml=pytest/results.xml --self-contained-html --cov=flask_unleash tests
+      - name: Send coverage to Coveralls
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.coveralls_repo_token }}
+        run: |
+          coveralls
+      - name: Notify Slack of pipeline completion
+        uses: 8398a7/action-slack@v2
+        with:
+          status: ${{ job.status }}
+          author_name: Github Action
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_slack_token }}
+          SLACK_WEBHOOK_URL: ${{ secrets.slack_webhook }}
+        if: always() 
+
+  tox:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: [3.6, 3.7, 3.8]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install Tox and any other packages
+        run:  |
+          python -m pip install --upgrade pip
+          pip install tox
+      - name: Run Tox
+        run: tox -e py
+      - name: Notify Slack of pipeline completion
+        uses: 8398a7/action-slack@v2
+        with:
+          status: ${{ job.status }}
+          author_name: Github Action
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_slack_token }}
+          SLACK_WEBHOOK_URL: ${{ secrets.slack_webhook }}
+        if: failure() 
