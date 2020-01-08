@@ -1,6 +1,6 @@
 # Flask-Unleash
 
-[![CircleCI](https://circleci.com/gh/Unleash/unleash-client-python.svg?style=svg)](https://circleci.com/gh/Unleash/unleash-client-python) [![Coverage Status](https://coveralls.io/repos/github/Unleash/Flask-Unleash/badge.svg?branch=master)](https://coveralls.io/github/Unleash/Flask-Unleash?branch=master) [![PyPI version](https://badge.fury.io/py/flask-unleash.svg)](https://badge.fury.io/py/flask-unleash) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/flask_unleash) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![](https://github.com/unleash/flask-unleash/workflows/CI/badge.svg?branch=master) [![Coverage Status](https://coveralls.io/repos/github/Unleash/Flask-Unleash/badge.svg?branch=master)](https://coveralls.io/github/Unleash/Flask-Unleash?branch=master) [![PyPI version](https://badge.fury.io/py/flask-unleash.svg)](https://badge.fury.io/py/flask-unleash) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/flask_unleash) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Flask extension to make using Unleash that much easier! 🚦🚦🚦  This plugin makes integrating the [Python Unleash client](https://github.com/unleash/unleash-client-python) into quick and easy.
 
