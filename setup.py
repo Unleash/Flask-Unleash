@@ -20,7 +20,7 @@ setup(
     include_package_data=True,
     platforms='any',
     install_requires=[
-        'UnleashClient==3.4.0',
+        'UnleashClient',
         'Flask'
     ],
     python_requres=">=3.6",
