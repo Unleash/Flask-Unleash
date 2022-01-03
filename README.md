@@ -1,11 +1,11 @@
 # Flask-Unleash
 
-![](https://github.com/unleash/flask-unleash/workflows/CI/badge.svg?branch=master) [![Coverage Status](https://coveralls.io/repos/github/Unleash/Flask-Unleash/badge.svg?branch=master)](https://coveralls.io/github/Unleash/Flask-Unleash?branch=master) [![PyPI version](https://badge.fury.io/py/flask-unleash.svg)](https://badge.fury.io/py/flask-unleash) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/flask_unleash) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![](https://github.com/unleash/flask-unleash/workflows/CI/badge.svg?branch=main) [![Coverage Status](https://coveralls.io/repos/github/Unleash/Flask-Unleash/badge.svg?branch=main)](https://coveralls.io/github/Unleash/Flask-Unleash?branch=main) [![PyPI version](https://badge.fury.io/py/flask-unleash.svg)](https://badge.fury.io/py/flask-unleash) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/flask_unleash) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Flask extension to make using Unleash that much easier! 🚦🚦🚦  This plugin makes integrating the [Python Unleash client](https://github.com/unleash/unleash-client-python) into quick and easy.
 
 * [Documentation](https://unleash.github.io/Flask-Unleash/)
-* [Changelog](https://github.com/Unleash/Flask-Unleash/blob/master/docs/changelog.md)
+* [Changelog](https://github.com/Unleash/Flask-Unleash/blob/main/docs/changelog.md)
 
 ## Pre-requisites
 
@@ -43,7 +43,7 @@ context = {
 flag_value_2 = unleash.client.is_enabled("complex-feature", context)
 ```
 
-Check out the [demo app](https://github.com/Unleash/Flask-Unleash/tree/master/demo_app) for a more real-life sample implementation.
+Check out the [demo app](https://github.com/Unleash/Flask-Unleash/tree/main/demo_app) for a more real-life sample implementation.
 
 ## Configuring Flask-Unleash
 

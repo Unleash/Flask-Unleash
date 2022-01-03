@@ -1,3 +1,7 @@
+## v2.0.0
+* (Major) Supports UnleashClient v 5.0.0
+* (Minor) Adds security code scanning.
+
 ## v1.0.2
 
 **General**

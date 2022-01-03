@@ -39,7 +39,7 @@ context = {
 flag_value_2 = unleash.client.is_enabled("complex-feature", context)
 ```
 
-Check out the [demo app](https://github.com/Unleash/Flask-Unleash/tree/master/demo_app) for a more real-life sample implementation.
+Check out the [demo app](https://github.com/Unleash/Flask-Unleash/tree/main/demo_app) for a more real-life sample implementation.
 
 ## Configuring Flask-Unleash
 
