@@ -6,13 +6,17 @@ from flask import current_app, _app_ctx_stack  # type: ignore
 CONFIG_MAPPING = {
     'UNLEASH_INSTANCE_ID': 'instance_id',
     'UNLEASH_REFRESH_INTERVAL': 'refresh_interval',
+    'UNLEASH_REFRESH_JITTER': 'refresh_jitter',
     'UNLEASH_METRIC_INTERVAL': 'metrics_interval',
+    'UNLEASH_METRIC_JITTER': 'metrics_jitter',
     'UNLEASH_DISABLE_METRICS': 'disable_metrics',
     'UNLEASH_DISABLE_REGISTRATION': 'disable_registration',
     'UNLEASH_CUSTOM_HEADERS': 'custom_headers',
     'UNLEASH_CUSTOM_OPTIONS': 'custom_options',
     'UNLEASH_CUSTOM_STRATEGIES': 'custom_strategies',
-    'UNLEASH_CACHE_DIRECTORY': 'cache_directory'
+    'UNLEASH_CACHE_DIRECTORY': 'cache_directory',
+    'UNLEASH_PROJECT_NAME': 'project_name',
+    'UNLEASH_VERBOSE_LOG_LEVEL': 'verbose_log_level'
 }
 
 
