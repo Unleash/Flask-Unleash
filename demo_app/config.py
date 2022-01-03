@@ -1,6 +1,3 @@
-import os
-
-
 class BaseConfig():
     # Unleash
     UNLEASH_URL = "https://app.unleash-hosted.com/demo/api"
@@ -11,6 +8,7 @@ class BaseConfig():
     # Logging
     LOG_LEVEL = "DEBUG"
     LOG_FORMATTER = "TEXT"
+
 
 def config_flask(app):
     app.config.from_object(BaseConfig())

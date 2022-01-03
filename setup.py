@@ -5,6 +5,7 @@ def readme():
     with open('README.md') as file:
         return file.read()
 
+
 setup(
     name='flask_unleash',
     version='1.0.4',
@@ -20,7 +21,7 @@ setup(
     include_package_data=True,
     platforms='any',
     install_requires=[
-        'UnleashClient==3.4.0',
+        'UnleashClient>=5.0.0,<6.0.0',
         'Flask'
     ],
     python_requres=">=3.6",
