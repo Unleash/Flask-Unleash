@@ -24,9 +24,9 @@ jobs:
           py.test --html=pytest/results.html --junitxml=pytest/results.xml --self-contained-html --cov=flask_unleash tests
       - name: Send coverage to Coveralls
         env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.coveralls_repo_token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          coveralls
+          coveralls --service=github
       - name: Notify Slack of pipeline completion
         uses: 8398a7/action-slack@v2
         with:
