@@ -1,5 +1,6 @@
 ## v2.0.0
-* (Major) Supports UnleashClient v 5.0.0
+* (Major) Loosen UnleashClient requirement.
+* (Major) Update config to support UnleashClient v5.0.0 initialization arguments.
 * (Minor) Adds security code scanning.
 
 ## v1.0.2
