@@ -21,6 +21,9 @@ pytest-rerunfailures
 pytest-runner
 pytest-xdist
 responses
+setuptools_scm
+sphinx
+sphinx-rtd-theme
 tox
 twine
 

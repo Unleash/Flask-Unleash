@@ -8,7 +8,6 @@ def readme():
 
 setup(
     name='flask_unleash',
-    version='2.0.0',
     url='https://github.com/Unleash/Flask-Unleash',
     license='MIT',
     author='Ivan Lee',
@@ -24,6 +23,7 @@ setup(
         'UnleashClient',
         'Flask'
     ],
+    setup_requires=['setuptools_scm'],
     python_requres=">=3.6",
     classifiers=[
         "Development Status :: 4 - Beta",
