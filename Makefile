@@ -32,8 +32,8 @@ pytest:
 	export PYTHONPATH=${ROOT_DIR}:$$PYTHONPATH && \
 	py.test --cov ${PROJECT_NAME} tests
 
-tox-osx:
-	tox -c tox-osx.ini --parallel auto
+tox:
+	tox --parallel auto
 
 #-----------------------------------------------------------------------
 # Rules
