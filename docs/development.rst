@@ -29,7 +29,7 @@ Release
 #######################################
 
 1. Land all your PRs on `main`!
-2. Update changelog.md and other documentation.
+2. Update CHANGELOG.md, config.csv (for config updates), and other documentation.
 3. Create tag on `main` branch.
 4. Create new Release in Github and paste in changelog.
 5. Github Actions workflow will automagically publish to Pypi and build documentation.

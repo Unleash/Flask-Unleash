@@ -2,7 +2,7 @@ name: Release docs
 
 on:
   push:
-    branches: ["feature/il/modernize"]
+    branches: ["main"]
 
 jobs:
   Build:
