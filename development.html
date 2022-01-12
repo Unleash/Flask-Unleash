@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Development &#8212; Flask-Unleash  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/flask.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Changelog" href="changelog.html" />
+    <link rel="prev" title="API Documentation" href="api.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="changelog.html" title="Changelog"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="api.html" title="API Documentation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Flask-Unleash  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Development</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="development">
+<h1>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h1>
+<p>Contributions welcome!</p>
+<p>Here are some notes about common tools and tasks you’ll run into when working on <cite>unleash-client-python</cite>.</p>
+<section id="tooling">
+<h2>Tooling<a class="headerlink" href="#tooling" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/pyenv/pyenv">Pyenv</a> for managing Python versions.</p></li>
+</ul>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Activate your virtualenv solution (e.g. <cite>source activate YOUR_VIRTUALENV</cite>).</p></li>
+<li><p>Run linting &amp; tests: <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">test</span></code></p></li>
+</ol>
+</section>
+<section id="running-tox-locally">
+<h2>Running Tox locally<a class="headerlink" href="#running-tox-locally" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Install Python versions for each supported version.</p></li>
+<li><p>Deactivate your local virtualenv (if it’s activated).</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">pyenv</span> <span class="pre">local</span> <span class="pre">3.10.X</span> <span class="pre">3.9.Y</span> <span class="pre">3.8.Z</span> <span class="pre">3.7.12</span> <span class="pre">3.6.15</span></code> (inserting appropriate patch versions).</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code> to get latest local dependencies.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">tox</span></code> to run tox.</p></li>
+</ol>
+</section>
+<section id="release">
+<h2>Release<a class="headerlink" href="#release" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Land all your PRs on <cite>main</cite>!</p></li>
+<li><p>Update changelog.md and other documentation.</p></li>
+<li><p>Create tag on <cite>main</cite> branch.</p></li>
+<li><p>Create new Release in Github and paste in changelog.</p></li>
+<li><p>Github Actions workflow will automagically publish to Pypi and build documentation.</p></li>
+</ol>
+</section>
+<section id="snippets">
+<h2>Snippets<a class="headerlink" href="#snippets" title="Permalink to this headline">¶</a></h2>
+<p>Serving docs from WSL!</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker run -d --name unleash-docs --rm -v <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/_build/html:/web -p <span class="m">8080</span>:8080 halverneus/static-file-server:latest
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <span id="sidebar-top"></span>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  
+    
+  
+
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tooling">Tooling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-tox-locally">Running Tox locally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release">Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#snippets">Snippets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+  <li><a href="index.html">Overview</a>
+    <ul>
+          <li>Previous: <a href="api.html" title="previous chapter">API Documentation</a>
+          <li>Next: <a href="changelog.html" title="next chapter">Changelog</a>
+    </ul>
+  </li>
+</ul>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/development.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022 Unleash.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  <script src="_static/version_warning_offset.js"></script>
+
+  </body>
+</html>

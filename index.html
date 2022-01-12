@@ -1,318 +1,236 @@
+
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="None">
-  
-  
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Flask-Unleash</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Home";
-    var mkdocs_page_input_path = "index.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="js/jquery-2.1.1.min.js" defer></script>
-  <script src="js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-</head>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flask-Unleash Documentation &#8212; Flask-Unleash  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/flask.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Documentation" href="api.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api.html" title="API Documentation"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Flask-Unleash  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Flask-Unleash Documentation</a></li> 
+      </ul>
+    </div>  
 
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> Flask-Unleash</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-requisites</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#quickstart">Quickstart</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#configuring-flask-unleash">Configuring Flask-Unleash</a>
-    </li>
-    </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="changelog/">Changelog</a>
-                    </li>
-                </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">Flask-Unleash</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Home</li>
-    <li class="wy-breadcrumbs-aside">
-      
-        <a href="https://github.com/unleash/flask-unleash/edit/master/docs/index.md"
-          class="icon icon-github"> Edit on GitHub</a>
-      
-    </li>
-  </ul>
-  
-  <hr/>
-</div>
-
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="flask-unleash">Flask-Unleash</h1>
-<p>Welcome to the Flask-Unleash pluginm documentation!  This plugin makes integrating the <a href="https://github.com/unleash/unleash-client-python">Python Unleash client</a> into quick and easy.</p>
-<h2 id="pre-requisites">Pre-requisites</h2>
-<p>To try out Flask-Unleash, you'll need an instance of the <a href="http://github.com/unleash/unleash">Unleash</a> server.  You can either use:</p>
-<ul>
-<li>Spin up a stack in Docker Compose using <a href="https://github.com/Unleash/unleash-docker">unleash-docker</a></li>
-<li>Check out the demo at <a href="https://www.unleash-hosted.com/">Unleash-Hosted</a></li>
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="flask-unleash-documentation">
+<h1>Flask-Unleash Documentation<a class="headerlink" href="#flask-unleash-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to the Flask-Unleash pluginm documentation!  This plugin makes integrating the <a class="reference external" href="https://github.com/unleash/unleash-client-python">Python Unleash client</a> into quick and easy.</p>
+<section id="pre-requisites">
+<h2>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">¶</a></h2>
+<p>To try out Flask-Unleash, you’ll need an instance of the <a class="reference external" href="http://github.com/unleash/unleash">Unleash</a> server.  You can either use:</p>
+<ul class="simple">
+<li><p>Spin up a stack in Docker Compose using <a class="reference external" href="https://github.com/Unleash/unleash-docker">unleash-docker</a></p></li>
+<li><p>Check out the demo at <a class="reference external" href="https://www.unleash-hosted.com/">&lt;Unleash-Hosted</a></p></li>
 </ul>
-<h2 id="quickstart">Quickstart</h2>
+</section>
+<section id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h2>
 <p>Install Flask-Unleash using pip.</p>
-<pre><code class="language-python">pip install Flask-Unleash
-</code></pre>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install Flask-Unleash
+</pre></div>
+</div>
 <p>Next, add Flask-Unleash to your code.</p>
-<pre><code class="language-Python">from flask import Flask
-from flask_unleash import Unleash
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_unleash</span> <span class="kn">import</span> <span class="n">Unleash</span>
 
-app = Flask(__name__)
-app.config[&quot;UNLEASH_URL&quot;] = &quot;http://localhost:4242/api&quot;
-app.config[&quot;UNLEASH_APP_NAME&quot;] = &quot;demoapp&quot;
-unleash = Unleash(app)
-</code></pre>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;UNLEASH_URL&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;http://localhost:4242/api&quot;</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;UNLEASH_APP_NAME&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;demoapp&quot;</span>
+<span class="n">unleash</span> <span class="o">=</span> <span class="n">Unleash</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Now you can use the client to check feature flags</p>
-<pre><code class="language-Python">flag_value_1 = unleash.client.is_enabled(&quot;simple-feature&quot;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">flag_value_1</span> <span class="o">=</span> <span class="n">unleash</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">is_enabled</span><span class="p">(</span><span class="s2">&quot;simple-feature&quot;</span><span class="p">)</span>
 
-# You can pass in a context object (https://unleash.github.io/docs/unleash_context) for more complex features.
-context = {
-    'userId': 'hamster@hamster.com'
-}
-flag_value_2 = unleash.client.is_enabled(&quot;complex-feature&quot;, context)
-</code></pre>
-<p>Check out the <a href="https://github.com/Unleash/Flask-Unleash/tree/main/demo_app">demo app</a> for a more real-life sample implementation.</p>
-<h2 id="configuring-flask-unleash">Configuring Flask-Unleash</h2>
-<p>The following configuration values exist for Flask-Unleash.</p>
-<table>
+<span class="c1"># You can pass in a context object (https://unleash.github.io/docs/unleash_context) for more complex features.</span>
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;userId&#39;</span><span class="p">:</span> <span class="s1">&#39;hamster@hamster.com&#39;</span>
+<span class="p">}</span>
+<span class="n">flag_value_2</span> <span class="o">=</span> <span class="n">unleash</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">is_enabled</span><span class="p">(</span><span class="s2">&quot;complex-feature&quot;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Check out the <a class="reference external" href="https://github.com/Unleash/Flask-Unleash/tree/main/demo_app">demo app</a> for a more real-life sample implementation.</p>
+</section>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Flask-Unleash Configuration</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
 <thead>
-<tr>
-<th>Config</th>
-<th>Description</th>
-<th>Required?</th>
-<th>Type</th>
-<th>Default Value</th>
+<tr class="row-odd"><th class="head"><p>Config</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default Value</p></th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>UNLEASH_URL</td>
-<td>Unleash server URL</td>
-<td>Y</td>
-<td>String</td>
-<td>N/A</td>
+<tr class="row-even"><td><p>UNLEASH_URL</p></td>
+<td><p>Unleash server URL</p></td>
+<td><p>Y</p></td>
+<td><p>String</p></td>
+<td><p>N/A</p></td>
 </tr>
-<tr>
-<td>UNLEASH_APP_NAME</td>
-<td>Name of your program</td>
-<td>Y</td>
-<td>String</td>
-<td>N/A</td>
+<tr class="row-odd"><td><p>UNLEASH_APP_NAME</p></td>
+<td><p>Name of your program</p></td>
+<td><p>Y</p></td>
+<td><p>String</p></td>
+<td><p>N/A</p></td>
 </tr>
-<tr>
-<td>UNLEASH_ENVIRONMENT</td>
-<td>Environment of your service</td>
-<td>Y</td>
-<td>String</td>
-<td>N/A</td>
+<tr class="row-even"><td><p>UNLEASH_ENVIRONMENT</p></td>
+<td><p>Environment of your service</p></td>
+<td><p>Y</p></td>
+<td><p>String</p></td>
+<td><p>N/A</p></td>
 </tr>
-<tr>
-<td>UNLEASH_INSTANCE_ID</td>
-<td>Unique ID for your program</td>
-<td>N</td>
-<td>String</td>
-<td>unleash-client-python</td>
+<tr class="row-odd"><td><p>UNLEASH_INSTANCE_ID</p></td>
+<td><p>Unique ID for your program</p></td>
+<td><p>N</p></td>
+<td><p>String</p></td>
+<td><p>unleash-client-python</p></td>
 </tr>
-<tr>
-<td>UNLEASH_REFRESH_INTERVAL</td>
-<td>How often the unleash client should check for configuration changes.</td>
-<td>N</td>
-<td>Integer</td>
-<td>15</td>
+<tr class="row-even"><td><p>UNLEASH_REFRESH_INTERVAL</p></td>
+<td><p>How often the unleash client should check for configuration changes.</p></td>
+<td><p>N</p></td>
+<td><p>Integer</p></td>
+<td><p>15</p></td>
 </tr>
-<tr>
-<td>UNLEASH_REFRESH_JITTER</td>
-<td>Seconds of jitter for refresh background job</td>
-<td>N</td>
-<td>Int</td>
-<td>15s</td>
+<tr class="row-odd"><td><p>UNLEASH_METRIC_INTERVAL</p></td>
+<td><p>How often the unleash client should send metrics to server.</p></td>
+<td><p>N</p></td>
+<td><p>Integer</p></td>
+<td><p>60</p></td>
 </tr>
-<tr>
-<td>UNLEASH_METRIC_INTERVAL</td>
-<td>How often the unleash client should send metrics to server.</td>
-<td>N</td>
-<td>Integer</td>
-<td>60</td>
+<tr class="row-even"><td><p>UNLEASH_DISABLE_METRICS</p></td>
+<td><p>Disables sending metrics to Unleash server.</p></td>
+<td><p>N</p></td>
+<td><p>Boolean</p></td>
+<td><p>F</p></td>
 </tr>
-<tr>
-<td>UNLEASH_METRIC_JITTER</td>
-<td>Seconds of jitter for metric background job</td>
-<td>N</td>
-<td>Int</td>
-<td>60s</td>
+<tr class="row-odd"><td><p>UNLEASH_DISABLE_REGISTRATION</p></td>
+<td><p>Disables registration with Unleash server.</p></td>
+<td><p>N</p></td>
+<td><p>Boolean</p></td>
+<td><p>F</p></td>
 </tr>
-<tr>
-<td>UNLEASH_DISABLE_METRICS</td>
-<td>Disables sending metrics to Unleash server.</td>
-<td>N</td>
-<td>Boolean</td>
-<td>F</td>
+<tr class="row-even"><td><p>UNLEASH_CUSTOM_HEADERS</p></td>
+<td><p>Custom headers to send to Unleash.</p></td>
+<td><p>N</p></td>
+<td><p>Dictionary</p></td>
+<td><p>{}</p></td>
 </tr>
-<tr>
-<td>UNLEASH_DISABLE_REGISTRATION</td>
-<td>Disables registration with Unleash server.</td>
-<td>N</td>
-<td>Boolean</td>
-<td>F</td>
+<tr class="row-odd"><td><p>UNLEASH_CUSTOM_OPTIONS</p></td>
+<td><p>Custom arguments for requests package.</p></td>
+<td><p>N</p></td>
+<td><p>Dictionary</p></td>
+<td><p>{}</p></td>
 </tr>
-<tr>
-<td>UNLEASH_CUSTOM_HEADERS</td>
-<td>Custom headers to send to Unleash.</td>
-<td>N</td>
-<td>Dictionary</td>
-<td>{}</td>
+<tr class="row-even"><td><p>UNLEASH_CUSTOM_STRATEGIES</p></td>
+<td><p>Custom strategies you’d like UnleashClient to support.</p></td>
+<td><p>N</p></td>
+<td><p>Dictionary</p></td>
+<td><p>{}</p></td>
 </tr>
-<tr>
-<td>UNLEASH_CUSTOM_OPTIONS</td>
-<td>Custom arguments for requests package.</td>
-<td>N</td>
-<td>Dictionary</td>
-<td>{}</td>
-</tr>
-<tr>
-<td>UNLEASH_CUSTOM_STRATEGIES</td>
-<td>Custom strategies you'd like UnleashClient to support.</td>
-<td>N</td>
-<td>Dictionary</td>
-<td>{}</td>
-</tr>
-<tr>
-<td>UNLEASH_CACHE_DIRECTORY</td>
-<td>Location of the cache directory. When unset, FCache will determine the location</td>
-<td>N</td>
-<td>Str</td>
-<td>Unset</td>
-</tr>
-<tr>
-<td>UNLEASH_PROJECT_NAME</td>
-<td>If set, only fetch feature flags for this project</td>
-<td>N</td>
-<td>String</td>
-<td>Empty</td>
-</tr>
-<tr>
-<td>UNLEASH_VERBOSE_LOG_LEVEL</td>
-<td>Log level for UnleashClient outputs.</td>
-<td>N</td>
-<td>Int</td>
-<td>30</td>
+<tr class="row-odd"><td><p>UNLEASH_CACHE_DIRECTORY</p></td>
+<td><p>Location of the cache directory. When unset, FCache will determine the location</p></td>
+<td><p>N</p></td>
+<td><p>Str</p></td>
+<td><p>Unset</p></td>
 </tr>
 </tbody>
 </table>
-              
-            </div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="changelog/" class="btn btn-neutral float-right" title="Changelog">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-      
         </div>
       </div>
+  <span id="sidebar-top"></span>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  
+    
+  
 
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-        <span>
-          <a href="https://github.com/unleash/flask-unleash/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
-        </span>
-    
-    
-    
-      <span><a href="changelog/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
+<h3><a href="#">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+  <li><a href="#">Overview</a>
+    <ul>
+          
+          <li>Next: <a href="api.html" title="next chapter">API Documentation</a>
+    </ul>
+  </li>
+</ul>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
 </div>
-    <script>var base_url = '.';</script>
-    <script src="js/theme_extra.js" defer></script>
-    <script src="js/theme.js" defer></script>
-      <script src="search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022 Unleash.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  <script src="_static/version_warning_offset.js"></script>
 
-</body>
+  </body>
 </html>
-
-<!--
-MkDocs version : 1.2.3
-Build Date UTC : 2022-01-03 17:07:12.142881+00:00
--->
