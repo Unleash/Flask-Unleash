@@ -1,3 +1,7 @@
+## Next verson
+* (Minor) Refactor `Flask-Unleash` to modernize tooling (`setuptools_scm` and centralizing tool config in `pyproject.toml`).
+* (Minor) Migrate documentation to Sphinx.
+
 ## v2.0.0
 * (Major) Loosen UnleashClient requirement.
 * (Major) Update config to support UnleashClient v5.0.0 initialization arguments.

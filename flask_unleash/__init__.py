@@ -1,3 +1,4 @@
+# pylint: disable=too-few-public-methods
 import os
 from UnleashClient import UnleashClient
 from flask import current_app, _app_ctx_stack  # type: ignore
@@ -21,6 +22,11 @@ CONFIG_MAPPING = {
 
 
 class Unleash():
+    """
+    Unleash extension for Flask.
+
+    :param app: Flask app instance
+    """
     def __init__(self, app=None):
         # Constants
         self.name = 'unleash_client'
@@ -32,6 +38,12 @@ class Unleash():
             self.init_app(app)
 
     def init_app(self, app):
+        """
+        Configures Unleash client instance, starts client, and makes it available for use via Flask.
+
+        :param app: Flask app instance
+        """
+
         # Populate required arguments.
         unleash_args = {
             'url': app.config['UNLEASH_URL'],

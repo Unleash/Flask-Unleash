@@ -17,9 +17,9 @@ build-local: clean build-package
 # Install
 #-----------------------------------------------------------------------
 
-install-clean:
-	pip install -U -r requirements-dev.txt && \
-	pip install -U -r requirements-package.txt
+install:
+	pip install -U -r requirements.txt && \
+	python setup.py install
 
 #-----------------------------------------------------------------------
 # Testing & Linting
@@ -29,11 +29,11 @@ lint:
 	mypy ${PROJECT_NAME};
 
 pytest:
-	export PYTHONPATH=${ROOT_DIR}: $$PYTHONPATH && \
+	export PYTHONPATH=${ROOT_DIR}:$$PYTHONPATH && \
 	py.test --cov ${PROJECT_NAME} tests
 
-tox-osx:
-	tox -c tox-osx.ini --parallel auto
+tox:
+	tox --parallel auto
 
 #-----------------------------------------------------------------------
 # Rules

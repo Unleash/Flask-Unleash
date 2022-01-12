@@ -1,9 +1,0 @@
-site_name: Flask-Unleash
-
-nav:
-  - Home: index.md
-  - Changelog: changelog.md
-
-theme: readthedocs
-
-repo_url: https://github.com/unleash/flask-unleash
