@@ -64,4 +64,5 @@ Configuration
     :hidden:
 
     api
+    development
     changelog
