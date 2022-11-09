@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,9 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="API Documentation" href="api.html" /> 
@@ -40,10 +42,10 @@
           <div class="body" role="main">
             
   <section id="flask-unleash-documentation">
-<h1>Flask-Unleash Documentation<a class="headerlink" href="#flask-unleash-documentation" title="Permalink to this headline">¶</a></h1>
+<h1>Flask-Unleash Documentation<a class="headerlink" href="#flask-unleash-documentation" title="Permalink to this heading">¶</a></h1>
 <p>Welcome to the Flask-Unleash pluginm documentation!  This plugin makes integrating the <a class="reference external" href="https://github.com/unleash/unleash-client-python">Python Unleash client</a> into quick and easy.</p>
 <section id="pre-requisites">
-<h2>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">¶</a></h2>
+<h2>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this heading">¶</a></h2>
 <p>To try out Flask-Unleash, you’ll need an instance of the <a class="reference external" href="http://github.com/unleash/unleash">Unleash</a> server.  You can either use:</p>
 <ul class="simple">
 <li><p>Spin up a stack in Docker Compose using <a class="reference external" href="https://github.com/Unleash/unleash-docker">unleash-docker</a></p></li>
@@ -51,7 +53,7 @@
 </ul>
 </section>
 <section id="quickstart">
-<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h2>
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">¶</a></h2>
 <p>Install Flask-Unleash using pip.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install Flask-Unleash
 </pre></div>
@@ -79,16 +81,9 @@
 <p>Check out the <a class="reference external" href="https://github.com/Unleash/Flask-Unleash/tree/main/demo_app">demo app</a> for a more real-life sample implementation.</p>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
 <table class="docutils align-default" id="id1">
 <caption><span class="caption-text">Flask-Unleash Configuration</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Config</p></th>
 <th class="head"><p>Description</p></th>
@@ -220,7 +215,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -228,7 +223,7 @@
   
     <div class="footer" role="contentinfo">
         &#169; Copyright 2022 Unleash.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   <script src="_static/version_warning_offset.js"></script>
 
