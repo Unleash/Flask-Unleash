@@ -1,7 +1,7 @@
 # pylint: disable=too-few-public-methods
 import os
 from UnleashClient import UnleashClient
-from flask import current_app, _app_ctx_stack  # type: ignore
+from flask import current_app  # type: ignore
 
 
 CONFIG_MAPPING = {
