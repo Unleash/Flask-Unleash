@@ -1,4 +1,5 @@
-## Next verson
+## v2.1.0
+* (Patch) Remove dependency on _app_ctx_stack
 * (Minor) Refactor `Flask-Unleash` to modernize tooling (`setuptools_scm` and centralizing tool config in `pyproject.toml`).
 * (Minor) Migrate documentation to Sphinx.
 
